@@ -1,0 +1,104 @@
+
+body {
+    background-color: #E8D2A6;
+    font-family: 'Manrope', sans-serif;
+    color: #4E6C50;
+    font-size: 30px;
+}
+
+
+#fun-mode-button{
+    display: flex;
+    font-family: 'Manrope', sans-serif;
+    color: #4E6C50;
+    font-size: 30px;
+    border-radius: 10px;
+    justify-content: flex-end;
+    
+}
+
+#fun-mode-button:hover {
+    background-color: #89C4E1;
+    color: white;
+}
+
+#BuzzWord-title {
+    display:flex;
+    font-family: 'Rampart One', cursive;
+    font-size: 100px;
+    color: #820000;
+    justify-content:center;
+}
+
+#how-to{
+    display:flex;
+    justify-content: flex-end;
+    flex-flow: column wrap;
+}
+
+
+#logo{
+    display:flex;
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    color:#820000;
+    background-color: #f9ff88;
+    border: 3px solid rgb(233, 147, 90);
+    justify-content: center;
+
+}
+
+#surprise-button-div{
+    display:flex;
+    justify-content: center;
+}
+
+#surprise-button {
+    font-family: 'Manrope', sans-serif;
+    color: #263727;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 25px;
+}
+#surprise-button:hover{
+    background-color: #FFB100;
+    color: black;
+}
+
+#boardDivs{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+#firstBoard {
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #secondBoard {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .letter-box {
+    border: 2px solid #820000;
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    height: 5rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  
+  .filled-box {
+    border: 2px solid rgb(44, 150, 203);
+  }
+  
+  .letter-row {
+    display: flex;
+  }
