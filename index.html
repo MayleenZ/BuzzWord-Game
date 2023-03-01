@@ -15,37 +15,115 @@
     <title>BuzzWord Game</title>
   </head>
   <body>
-    <button id="fun-mode-button" type="button">FUN MODE</button>
-    <audio controls
-    src = "stranger-things-124008.mp3"> <a href = "https://cdn.pixabay.com/audio/2022/10/25/audio_ecba0c58a1.mp3?filename=stranger-things-124008.mp3"
-    </a>
-  </audio>
+    <input type="text" placeholder="Enter Player Names: " />
+
+    <button id="playerName-button" type="button">Click Me</button>
+    <ul></ul>
+
+    <h1 id="BuzzWord-title">BuzzWord</h1>
+
+    <div class="how-to">
+      <h1 class="how-to">How to play</h1>
+      <p class="how-to">
+        Click on surprise me and guess the buzz word before your partner!
+      </p>
+    </div>
+
+    <div id="logo">
+      <h2>Do you think you know your vocab?</h2>
+    </div>
+
+    <div id="surprise-button-div">
+      <button id="surprise-button" type="button">Surprise Me</button>
+    </div>
+
+    <div id="boardDivs">
+      <div id="firstBoard"></div>
+      <br />
+      <div id="secondBoard"></div>
+    </div>
 
 
-      <h1 id="BuzzWord-title">BuzzWord</h1>
-
-      <div>
-        <h2 id="how-to">How to play</h2>
-        <p>
-          Click on surprise me and get the buzz word before your partner!
-        </p>
+    <div class = "grid-container">
+    <div class="keyboard1">
+      <div id="first-row">
+        <button class = "keyButton">q</button>
+        <button class = "keyButton">w</button>
+        <button class = "keyButton">e</button>
+        <button class = "keyButton">r</button>
+        <button class = "keyButton">t</button>
+        <button class = "keyButton">y</button>
+        <button class = "keyButton">u</button>
+        <button class = "keyButton">i</button>
+        <button class = "keyButton">o</button>
+        <button class = "keyButton">p</button>
+        <button class = "keyButton">Backspace</button>
       </div>
 
-<div id = "logo">
-    <h2>Do you think you know your vocab?</h2>
-</div>
+      <div id="second-row">
+        <button class = "keyButton">a</button>
+        <button class = "keyButton">s</button>
+        <button class = "keyButton">d</button>
+        <button class = "keyButton">f</button>
+        <button class = "keyButton">g</button>
+        <button class = "keyButton">h</button>
+        <button class = "keyButton">j</button>
+        <button class = "keyButton">k</button>
+        <button class = "keyButton">l</button>
+        <button class = "keyButton">Enter</button>
+      </div>
 
-    <div  id="surprise-button-div">
-      <button id = "surprise-button" type="button">Surprise Me</button>
+      <div id="third-row">
+        <button class = "keyButton">z</button>
+        <button class = "keyButton">x</button>
+        <button class = "keyButton">c</button>
+        <button class = "keyButton">v</button>
+        <button class = "keyButton">b</button>
+        <button class = "keyButton">n</button>
+        <button class = "keyButton">m</button>
+        <button class = "keyButton">Fun fact</button>
+      </div>
     </div>
 
-<div id="boardDivs">
-    <div id = "firstBoard">
-    </div>
-<br>
-    <div id ="secondBoard">
+    <div class="keyboard2">
+      <div id="first-row2">
+        <button class = "keyButton">q</button>
+        <button class = "keyButton">w</button>
+        <button class = "keyButton">e</button>
+        <button class = "keyButton">r</button>
+        <button class = "keyButton">t</button>
+        <button class = "keyButton">y</button>
+        <button class = "keyButton">u</button>
+        <button class = "keyButton">i</button>
+        <button class = "keyButton">o</button>
+        <button class = "keyButton">p</button>
+        <button class = "keyButton">Backspace</button>
+      </div>
 
+      <div id="second-row2">
+        <button class = "keyButton">a</button>
+        <button class = "keyButton">s</button>
+        <button class = "keyButton">d</button>
+        <button class = "keyButton">f</button>
+        <button class = "keyButton">g</button>
+        <button class = "keyButton">h</button>
+        <button class = "keyButton">j</button>
+        <button class = "keyButton">k</button>
+        <button class = "keyButton">l</button>
+        <button class = "keyButton">Enter</button>
+      </div>
+
+      <div id="third-row2">
+        <button class = "keyButton">z</button>
+        <button class = "keyButton">x</button>
+        <button class = "keyButton">c</button>
+        <button class = "keyButton">v</button>
+        <button class = "keyButton">b</button>
+        <button class = "keyButton">n</button>
+        <button class = "keyButton">m</button>
+        <button class = "keyButton">Fun fact</button>
+      </div>
     </div>
-</div>
+  </div>
   </body>
 </html>

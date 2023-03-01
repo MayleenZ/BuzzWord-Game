@@ -1,39 +1,46 @@
 
 body {
-    background-color: #E8D2A6;
+    background-color: #F1DDBF;
     font-family: 'Manrope', sans-serif;
-    color: #4E6C50;
+    color: #78938A;
     font-size: 30px;
 }
 
 
-#fun-mode-button{
-    display: flex;
+#playerName-button{
     font-family: 'Manrope', sans-serif;
     color: #4E6C50;
-    font-size: 30px;
+    font-size: 15px;
     border-radius: 10px;
-    justify-content: flex-end;
+    margin-top: 40px;
+    margin-left: 20px;
+
     
 }
 
-#fun-mode-button:hover {
+#playerName-button:hover {
     background-color: #89C4E1;
     color: white;
 }
 
+input{
+    background-color: #c2ebff;
+    font-size: 20px;
+    margin: 30px;
+}
+
+
+
 #BuzzWord-title {
     display:flex;
     font-family: 'Rampart One', cursive;
-    font-size: 100px;
-    color: #820000;
+    font-size: 120px;
+    color: #414d64;
     justify-content:center;
 }
 
-#how-to{
-    display:flex;
-    justify-content: flex-end;
-    flex-flow: column wrap;
+.how-to{
+    margin-left: 20px;
 }
 
 
@@ -41,12 +48,22 @@ body {
     display:flex;
     font-family: 'Manrope', sans-serif;
     font-size: 30px;
-    color:#820000;
-    background-color: #f9ff88;
-    border: 3px solid rgb(233, 147, 90);
+    color:white;
+    background-color: #24A19C;
+    border: 3px solid rgb(81, 99, 15);
     justify-content: center;
 
 }
+
+#logo:hover:after{
+    display: flex;
+    background-color: #F1DDBF;
+    color: #525E75;
+    border: 10px solid #F1DDBF;
+    margin: 40px;
+    content: "Lets Find Out!!";
+}
+
 
 #surprise-button-div{
     display:flex;
@@ -61,7 +78,7 @@ body {
     margin: 25px;
 }
 #surprise-button:hover{
-    background-color: #FFB100;
+    background-color: #92BA92;
     color: black;
 }
 
@@ -81,8 +98,8 @@ body {
     flex-direction: column;
   }
 
-  .letter-box {
-    border: 2px solid #820000;
+  .tile-box {
+    border: 2px solid black;
     border-radius: 5px;
     margin: 2px;
     font-size: 2.5rem;
@@ -99,6 +116,13 @@ body {
     border: 2px solid rgb(44, 150, 203);
   }
   
-  .letter-row {
+  .tile-row {
     display: flex;
+  }
+
+
+.keyButton{
+    border: 1px solid rgb(18, 103, 43);
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
   }

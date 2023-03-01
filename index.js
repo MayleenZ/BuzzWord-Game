@@ -1,12 +1,12 @@
 const surpriseButton = document.querySelector("#surprise-button")
-const funButton = document.querySelector("#fun-mode-button")
-console.log(surpriseButton);
-console.log(funButton);
-
+const p1Button = document.querySelector("#playerName-button")
+const p2Button = document.querySelector("#player2-button")
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+const input = document.querySelector('input')
+console.log(input);
 
 
 //* Creating theme selection to coincide with surprise me button
-
 
 
 
@@ -18,7 +18,8 @@ surpriseButton.addEventListener("click", function(e){
         e.target.innerHTML = "Food Edition"
     } else if (randomNum === 2) {
         e.target.innerHTML = "General Theme Edition";
-    } 
+    }     
+    audio.play()
 });
 
 //0 = Holiday Edition
@@ -26,14 +27,19 @@ surpriseButton.addEventListener("click", function(e){
 //2 = General Theme Edition 
 
 
-funButton.addEventListener("click", function(e) {
-    console.log("fun button clicked");
+p1Button.addEventListener("click", function(e) {
+    audio.play()
+    const li = document.createElement("li")
+    li.textContent = `Welcome Player: ${input.value.toUpperCase()}`
+    document.querySelector('ul').appendChild(li)
+    input.value = ""
 })
-//when we click on fun mode - music gets added 
+
+
 
 //* Themes
 
-let foodTheme = ["anise", "curry", "dairy", "dates","dough", "drink", "feast", "flour", "fried", "fruit", "guava", "herbs", "honey", "icing", "jelly", "juice", "lemon", "maize", "mango", "melon", "mint", "olive", "onion", "pasta", "peach", "pecan ", "syrup" , "thyme", "toast", "apple"]
+let foodTheme = ["anise", "curry", "dairy", "dates","dough", "drink", "feast", "flour", "fried", "fruit", "guava", "herbs", "honey", "icing", "jelly", "juice", "lemon", "maize", "mango", "melon", "pizza", "olive", "onion", "pasta", "peach", "pecan ", "syrup" , "thyme", "toast", "apple"]
 let holidayTheme = ["carol", "snowy", "druid", "elves", "holly", "jolly", "peace", "music", "bells", "cards", "arbor", "labor", "candy", "hymns", "cupid", "gnome", "claus", "movie", "vixen", "santa", "roses", "heart", "lucky", "clove", "july", "birth", "eagle", "rabbi", "earth", "cacao"]
 let generalTheme = ["cabby", "babes", "early", "eager", "fable", "gable", "habit", "jacks", "macaw", "pacer", "packs", "rabid", "sabre", "tables", "tabby", "udder", "vague", "wacky", "waded", "yacks", "cadet", "imply", "index", "indie", "abhor", "ideas", "icons", "inbox", "genes", "gears"]
 
@@ -56,30 +62,19 @@ console.log(correctGeneralGuess);
 const body = document.querySelector("body")
 console.log(body);
 
-//*maybe
-// function makeBoard(){
-//     let board = document.querySelector("#board")
-//     console.log(board);
-
-
-
-// }
-
-// makeBoard()
+//* Building the boards 
 function firstBoard() {
-    let board = document.getElementById("firstBoard");
-
+    firstBoard = document.querySelector("#firstBoard")
     for (let i = 0; i < numOfGuesses; i++) {
-        let row = document.createElement("div")
-        row.className = "letter-row"
+        let rowDiv1 = document.createElement("div")
+        rowDiv1.className = "tile-row"
         
         for (let j = 0; j < 5; j++) {
-            let box = document.createElement("div")
-            box.className = "letter-box"
-            row.append(box)
+            let boxDiv1 = document.createElement("div")
+            boxDiv1.className = "tile-box"
+            rowDiv1.append(boxDiv1)
         }
-
-        board.append(row)
+        firstBoard.append(rowDiv1)
     }
 }
 
@@ -87,21 +82,25 @@ firstBoard()
 
 
 function secondBoard() {
-    let board = document.getElementById("secondBoard");
-
+    secondBoard = document.querySelector("#secondBoard")
     for (let i = 0; i < numOfGuesses; i++) {
-        let row = document.createElement("div")
-        row.className = "letter-row"
+        let rowDiv2 = document.createElement("div")
+        rowDiv2.className = "tile-row"
         
         for (let j = 0; j < 5; j++) {
-            let box = document.createElement("div")
-            box.className = "letter-box"
-            row.append(box)
+            let boxDiv2 = document.createElement("div")
+            boxDiv2.className = "tile-box"
+            rowDiv2.append(boxDiv2)
         }
-
-        board.append(row)
+        secondBoard.append(rowDiv2)
     }
 }
 
 secondBoard()
+
+
+
+//* KeyBoard
+
+
 
