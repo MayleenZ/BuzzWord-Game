@@ -12,8 +12,7 @@ body {
     color: #4E6C50;
     font-size: 15px;
     border-radius: 10px;
-    margin-top: 40px;
-    margin-left: 20px;
+    margin-left: -30px;
 
     
 }
@@ -21,6 +20,8 @@ body {
 #playerName-button:hover {
     background-color: #89C4E1;
     color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 2px rgba(176, 119, 22, 0.8)
 }
 
 input{
@@ -66,7 +67,7 @@ input{
 
 
 #surprise-button-div{
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -75,30 +76,41 @@ input{
     color: #263727;
     font-size: 30px;
     border-radius: 10px;
-    margin: 25px;
+    margin: 15px;
+
 }
 #surprise-button:hover{
     background-color: #92BA92;
     color: black;
+    cursor: pointer;
 }
 
 #boardDivs{
     display: flex;
-    gap: 40px;
+    gap: 70px;
     justify-content: center;
+    align-items: center;
 }
 
 #firstBoard {
+    display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 2px;
   }
   
   #secondBoard {
+    display: flex;
     align-items: center;
     flex-direction: column;
+  } 
+
+  #keyboard1 {
+    display: flex;
+    align-items: center;
   }
 
-  .tile-box {
+  .tile-box1, .tile-box2 {
     border: 2px solid black;
     border-radius: 5px;
     margin: 2px;
@@ -113,16 +125,50 @@ input{
   }
   
   .filled-box {
-    border: 2px solid rgb(44, 150, 203);
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    height: 5rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
   }
   
-  .tile-row {
+  .tile-row1, .tile-row2 {
     display: flex;
   }
 
 
-.keyButton{
-    border: 1px solid rgb(18, 103, 43);
+.keyButton1, .keyButton2{
+    border: 1px solid black;
     font-family: 'Manrope', sans-serif;
     font-size: 15px;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    cursor: pointer;
   }
+
+  .keyButton1:hover{
+    box-shadow: 2px 3px 3px 1px  rgba(153, 172, 186, 0.8)
+  }
+  .keyButton2:hover{
+    box-shadow: 2px 3px 3px 1px  rgba(153, 172, 186, 0.8)
+  }
+
+  #Boards {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+#names {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+
+}
