@@ -10,7 +10,7 @@ body {
 #playerName-button{
     font-family: 'Manrope', sans-serif;
     color: #4E6C50;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 10px;
     margin-left: -30px;
 
@@ -26,8 +26,9 @@ body {
 
 input{
     background-color: #c2ebff;
-    font-size: 20px;
+    font-size: 30px;
     margin: 30px;
+    border-radius: 6px;
 }
 
 
@@ -44,25 +45,33 @@ input{
     margin-left: 20px;
 }
 
+#master-logo {
+    display:flex;
+    justify-content: center;
+    color:rgb(5, 5, 5);
+}
 
 #logo{
-    display:flex;
     font-family: 'Manrope', sans-serif;
     font-size: 30px;
-    color:white;
-    background-color: #24A19C;
-    border: 3px solid rgb(81, 99, 15);
-    justify-content: center;
-
+    color:rgb(5, 5, 5);
+    border: 3px solid rgb(99, 64, 15);
+    max-width: 900px;
+    padding: 10px;
+    opacity: 0.7;
+    background-color: #439A97;
 }
 
 #logo:hover:after{
     display: flex;
     background-color: #F1DDBF;
     color: #525E75;
-    border: 10px solid #F1DDBF;
-    margin: 40px;
-    content: "Lets Find Out!!";
+    border: 10px solid #5c82f3;
+    margin: 4px;
+    content: "BuzzWord left a message for you, try to find it";
+    font-size: 20px;
+    padding: 20px;
+    justify-content: center;
 }
 
 
@@ -114,7 +123,7 @@ input{
     border: 2px solid black;
     border-radius: 5px;
     margin: 2px;
-    font-size: 2.5rem;
+    font-size: 45px;
     font-weight: 700;
     height: 5rem;
     width: 4rem;
@@ -125,11 +134,11 @@ input{
   }
   
   .filled-box {
-    border: 2px solid black;
+    border: 4px solid rgb(136, 196, 195);
     border-radius: 5px;
     margin: 2px;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 45px;
+    font-weight: 900;
     height: 5rem;
     width: 4rem;
     display: flex;
@@ -171,4 +180,9 @@ input{
     justify-content: center;
     gap: 200px;
 
+}
+
+.scrabbleImg{
+    background-image: url("https://media.istockphoto.com/id/579236076/photo/scrabble-letters.jpg?s=1024x1024&w=is&k=20&c=mIEHzWL8OykS4JYa4yP9-fvGuUYMB_NYUDLIbroh-p4=");
+    
 }
