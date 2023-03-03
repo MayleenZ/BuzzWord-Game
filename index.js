@@ -6,32 +6,41 @@ const evilLaugh = new Audio("https://www.fesliyanstudios.com/play-mp3/3976");
 const booSound = new Audio("https://www.fesliyanstudios.com/play-mp3/4221");
 const input = document.querySelector("input");
 console.log(input);
+let randomNum1;
+let randomNum2;
+let array1;
+
 
 //* Creating theme selection to coincide with surprise me button; using random
 surpriseButton1.addEventListener("click", function (e) {
   clickingNoise.play();
-  let randomNum = Math.floor(Math.random() * 4);
-  if (randomNum === 0) {
+  randomNum1 = Math.floor(Math.random() * 3);
+  if (randomNum1 === 0) {
     e.target.innerHTML = "Holiday Edition"; //0
-  } else if (randomNum === 1) {
+  } else if (randomNum1 === 1) {
     e.target.innerHTML = "Food Edition"; //1
-  } else if (randomNum === 2) {
+  } else if (randomNum1 === 2) {
     e.target.innerHTML = "General Theme Edition"; //2
   }
+   array1 = allWords[randomNum1]
+   //using randomNum to access array we are going to use; using same randomNum to pick category
+    console.log(array1);
 });
 
 //* Maybe now i just need a function that calls the individual themes
 
 surpriseButton2.addEventListener("click", function (e) {
   clickingNoise.play();
-  let randomNum = Math.floor(Math.random() * 4);
-  if (randomNum === 0) {
+  randomNum2 = Math.floor(Math.random() * 3);
+  if (randomNum2 === 0) {
     e.target.innerHTML = "Holiday Edition"; //0
-  } else if (randomNum === 1) {
+  } else if (randomNum2 === 1) {
     e.target.innerHTML = "Food Edition"; //1
-  } else if (randomNum === 2) {
+  } else if (randomNum2 === 2) {
     e.target.innerHTML = "General Theme Edition"; //2
   }
+  const array2 = allWords[randomNum2]
+  console.log(array2);
 });
 
 //* Adds player names to document
@@ -150,7 +159,8 @@ console.log(foodTheme);
 allWords.push(holidayTheme);
 allWords.push(foodTheme);
 allWords.push(generalTheme);
-console.log(allWords.join(","));
+console.log(allWords);
+
 
 ////////////////* Declaring variables
 
@@ -159,13 +169,13 @@ let numOfGuesses1 = 4;
 let remainingGuess1 = numOfGuesses1;
 let currentGuess1 = [];
 let nextLetter1 = 0;
-let correctFoodGuess1 = foodTheme[Math.floor(Math.random() * foodTheme.length)];
+let correctFoodGuess11 = foodTheme[Math.floor(Math.random() * foodTheme.length)];
 let correctHolidayGuess1 =
   holidayTheme[Math.floor(Math.random() * holidayTheme.length)];
 let correctGeneralGuess1 =
   generalTheme[Math.floor(Math.random() * generalTheme.length)];
 //* Keyboard 1 targetted rightGuessString
-console.log(correctFoodGuess1);
+console.log(correctFoodGuess11);
 console.log(correctHolidayGuess1);
 console.log(correctGeneralGuess1);
 
@@ -239,10 +249,11 @@ console.log(board2);
 console.log(boardandkey2);
 
 function checkGuess1() {
-  let guessString = "";
-  let correctFoodGuess1 = Array.from(correctFoodGuess1);
-  let correctHolidayGuess1 = Array.from(correctHolidayGuess1);
-  let correctGeneralGuess1 = Array.from(correctGeneralGuess1);
+    let guessString = currentGuess1[0]
+    //its empty - so not within the arrays
+  let correctFoodGuess1 = Array.from(foodTheme);
+  let correctHolidayGuess1 = Array.from(holidayTheme);
+  let correctGeneralGuess1 = Array.from(generalTheme);
 
   if (correctFoodGuess1.includes(guessString)) {
     checkGuess1FoodFunction();
@@ -302,9 +313,9 @@ keyboard1.addEventListener("click", function (e) {
   if (remainingGuess1 === 0) {
     return;
   }
-  if (isLetter1) {
-    console.log(selectedKey);
-  }
+//   if (isLetter1) {
+//     console.log(selectedKey);
+//   }
 
   if (selectedKey === "backspace" && nextLetter1 != 0) {
     deleteLetter1();
@@ -312,7 +323,7 @@ keyboard1.addEventListener("click", function (e) {
   }
 
   if (selectedKey === "enter") {
-    checkGuess1();
+    checkGuess1FoodFunction();
     return;
   }
 
@@ -491,20 +502,22 @@ function deleteLetter2() {
 //   }
 
 function checkGuess1FoodFunction() {
-  let targetRow1 = document.querySelector(".tile-row1")[4 - remainingGuess1];
+  let targetRow1 = document.querySelectorAll(".tile-row1")[4 - remainingGuess1];
+  console.dir(targetRow1);
   let guessString = "";
-  let correctFoodGuess1 = Array.from(correctFoodGuess1);
-
+  console.log(array1);
+  let correctFoodGuessArray = Array.from(array1);
+console.log(currentGuess1);
   for (const eachVal of currentGuess1) {
     guessString += eachVal;
   }
-
-  if (guessString != 5) {
+console.log(guessString);
+  if (guessString.length != 5) {
     alert("Not enough words! Silly Fool - BuzzWord");
     return;
   }
 
-  if (allWords.includes(guessString) === false) {
+  if (array1.includes(guessString) === false) {
     alert("Oof nice try I guess");
     return;
   }
@@ -515,16 +528,17 @@ function checkGuess1FoodFunction() {
     let letter = currentGuess1[eachLetter];
     let letterColor = ""
 
-    let letterPosition = correctFoodGuess1.indexOf(currentGuess1[eachLetter]);
+    let letterPosition = correctFoodGuessArray.indexOf(currentGuess1[eachLetter]);
 
-    if (currentGuess1[i] === correctFoodGuess1[i]) {
+    if (currentGuess1[eachLetter] === correctFoodGuessArray[eachLetter]) {
       letterColor = "green";
     } else {
       letterColor = "yellow";
     }
-    correctFoodGuess1[letterPosition] = "#";
-
-    if (guessString === correctFoodGuess1) {
+    correctFoodGuessArray[letterPosition] = "#";
+console.log(correctFoodGuessArray);
+console.log(guessString);
+    if (guessString === correctFoodGuess11) {
       alert("You won the game!..this time");
       remainingGuess1 = 0;
       return;
@@ -533,10 +547,10 @@ function checkGuess1FoodFunction() {
       currentGuess1 = [];
       nextLetter1 = 0;
 
-      if (remainingGuess1 === 0) {
-        alert("Game over, you lost!");
-        alert(`The correct word was ${correctFoodGuess1}`);
-      }
+    //   if (remainingGuess1 === 0) {
+    //     alert("Game over, you lost!");
+    //     alert(`The correct word was ${correctFoodGuess1}`);
+    //   }
     }
   }
 }
