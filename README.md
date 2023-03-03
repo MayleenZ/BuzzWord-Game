@@ -24,7 +24,10 @@ BuzzWord can be used as a multiplayer game or even a single player game. As long
 Mayleen Zhagnay
 
 
-![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)    [LinkedIn Profile](https://www.linkedin.com/in/mayleenzhagnay/)
+
+![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)    
+[LinkedIn Profile](https://www.linkedin.com/in/mayleenzhagnay/)
+
 
 
 
