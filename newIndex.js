@@ -1,11 +1,15 @@
-const surpriseButton1 = document.querySelector("#surprise-button1");
-const surpriseButton2 = document.querySelector("#surprise-button2");
-const p1Button = document.querySelector("#playerName-button");
+
 const clickingNoise = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
 const evilLaugh = new Audio("https://www.fesliyanstudios.com/play-mp3/3976");
 const booSound = new Audio("https://www.fesliyanstudios.com/play-mp3/4221");
 const input = document.querySelector("input");
-console.log(input);
+
+
+
+const surpriseButton1 = document.querySelector("#surprise-button1");
+const surpriseButton2 = document.querySelector("#surprise-button2");
+const p1Button = document.querySelector("#playerName-button");
+
 
 //* Creating theme selection to coincide with surprise me button; using random
 surpriseButton1.addEventListener("click", function (e) {

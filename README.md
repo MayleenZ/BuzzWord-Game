@@ -1,7 +1,7 @@
 # BuzzWord-Game
 
 # About The Project
-[Deployed Game](https://www.example.com)
+The Game is 
 
 
 # Built With
