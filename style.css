@@ -150,7 +150,17 @@ input{
  
   
   .filled-box {
-    border: 3px solid rgb(12, 13, 13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: 3px solid rgb(126, 103, 103);
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 45px;
+    font-weight: 900;
+    height: 5rem;
+    width: 4rem;
   }
   
   .tile-row1, .tile-row2 {
