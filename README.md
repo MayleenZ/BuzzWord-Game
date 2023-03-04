@@ -29,7 +29,7 @@ BuzzWord can be used as a multiplayer game or even a single player game. As long
 ## GAME:
 
 **THEMES**:
-Three themes: Food, General, Holiday
+There will be three themes: Food Edition, General Edition and Holiday Edition.
 The surprise button will give the users a random selection of themes.
 
 
