@@ -26,24 +26,23 @@ BuzzWord can be used as a multiplayer game or even a single player game. As long
 ![wireframe](https://i.postimg.cc/9fBtx0q2/Buzz-Word-Wireframe.png)
 
 
+## GAME:
 
-THEMES:
+**THEMES**:
 Three themes: Food, General, Holiday
 The surprise button will give the users a random selection of themes.
 
 
-Player Names:
+**PLAYER NAMES / TEAM NAME**:
 Names will be added as players type their names in and click on a button.
-Even have the option to enter one team name for both of them as they are working together.
+Players have the option to enter one team name for both of them as they are working together.
 
 
-WORD TILES:
+**WORD TILES**:
 Tiles will turn green if player guesses the word correctly.
 Tiles will turn yellow if player guess the correct letter in the right location but still isn't the complete word.
 Tiles will turn gray if no letters have been solved.
 
-
-GAME:
 
 **LAYOUT**
 There will be five letter words and four tries.
