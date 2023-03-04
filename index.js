@@ -8,10 +8,25 @@ const input = document.querySelector("input");
 console.log(input);
 let randomNum1;
 let randomNum2;
-let array1;
-let array2;
+// let array1;
+// let array2;
 let theme1;
+let theme2;
 let rightGuess1;
+let rightGuess2;
+
+
+/*
+have an array with the players name, 
+if empty array
+    grey out the surprise button and the keyboard
+if array length === 1
+    grey out the player 2 surprise button/keyboard and then in the check guess function add logic, that checks that player2 guess is not exhausted, 
+        if exhausted and lost then player 1 lost too
+(dont have to add this logic to array stuff)
+but if array length === 2
+    add logic to check guess2 that if player 1 has exhausted etc
+*/
 
 //* Creating theme selection to coincide with surprise me button; using random
 surpriseButton1.addEventListener("click", function (e) {
@@ -27,7 +42,7 @@ surpriseButton1.addEventListener("click", function (e) {
     e.target.innerHTML = "General Theme Edition"; //2
     theme1 = "General Theme Edition"
   }
-  array1 = allWords[randomNum1];
+//   array1 = allWords[randomNum1];
   console.log('theme1 first', theme1);
   if (theme1 === "Food Edition"){
     rightGuess1 = foodTheme[Math.floor(Math.random() * foodTheme.length)];
@@ -36,10 +51,9 @@ surpriseButton1.addEventListener("click", function (e) {
  } else if (theme1 === "General Theme Edition"){
     rightGuess1 = generalTheme[Math.floor(Math.random() * generalTheme.length)];
  } 
- console.log("player1 answer: ", rightGuess1);
-  // if theme is <> then correctThemeString = word from array
+    console.log("player1 answer: ", rightGuess1);
   //using randomNum to access array we are going to use; using same randomNum to pick category
-  console.log('firstplayer array', array1);
+//   console.log('firstplayer array', array1);
   return rightGuess1
 });
 console.log("player1 answer: ", rightGuess1);
@@ -52,14 +66,29 @@ surpriseButton2.addEventListener("click", function (e) {
   randomNum2 = Math.floor(Math.random() * 3);
   if (randomNum2 === 0) {
     e.target.innerHTML = "Food Edition"; //0
+    theme2 = "Food Edition";
   } else if (randomNum2 === 1) {
     e.target.innerHTML = "Holiday Edition"; //1
+    theme2 = "Holiday Edition";
   } else if (randomNum2 === 2) {
     e.target.innerHTML = "General Theme Edition"; //2
+    theme2 = "General Theme Edition";
   }
-  array2 = allWords[randomNum2];
-  console.log('second player array', array2);
+//   array1 = allWords[randomNum1];
+  console.log('theme2 first', theme2);
+  if (theme2 === "Food Edition"){
+    rightGuess2 = foodTheme[Math.floor(Math.random() * foodTheme.length)];
+ } else if (theme2 === "Holiday Edition"){
+    rightGuess2 = holidayTheme[Math.floor(Math.random() * holidayTheme.length)];
+ } else if (theme2 === "General Theme Edition"){
+    rightGuess2 = generalTheme[Math.floor(Math.random() * generalTheme.length)];
+ } 
+    console.log("first player2 answer: ", rightGuess2);
+  //using randomNum to access array we are going to use; using same randomNum to pick category
+//   console.log('secondPlayer array', array2);
+  return rightGuess2
 });
+console.log("second player2 answer: ", rightGuess2);
 
 //* Adds player names to document
 p1Button.addEventListener("click", function (e) {
@@ -186,25 +215,6 @@ let numOfGuesses1 = 4;
 let remainingGuess1 = numOfGuesses1;
 let currentGuess1 = [];
 let nextLetter1 = 0;
-// let rightGuess1;
-// let correctFoodString1 =
-//   foodTheme[Math.floor(Math.random() * foodTheme.length)];
-// let correctHolidayString1 =
-//   holidayTheme[Math.floor(Math.random() * holidayTheme.length)];
-// let correctGeneralString1 =
-//   generalTheme[Math.floor(Math.random() * generalTheme.length)];
-// //* Keyboard 1 targeted rightGuessString
-// console.log(correctFoodString1);
-// console.log(correctHolidayString1);
-// console.log(correctGeneralString1);
-// console.log('2nd theme1,', theme1)
-// if (theme1 === "Food Edition"){
-//    rightGuess1 = foodTheme[Math.floor(Math.random() * foodTheme.length)];
-// } else if (theme1 === "Holiday Edition"){
-//    rightGuess1 = holidayTheme[Math.floor(Math.random() * holidayTheme.length)];
-// } else if (theme1 === "General Theme Edition"){
-//    rightGuess1 = generalTheme[Math.floor(Math.random() * generalTheme.length)];
-// } 
 
 
 ///* Targeting keyboard2
@@ -214,12 +224,12 @@ let currentGuess2 = []; //user's current guess array we will push by each select
 let nextLetter2 = 0;
 
 
-let correctFoodString2 =
-  foodTheme[Math.floor(Math.random() * foodTheme.length)];
-let correctHolidayString2 =
-  holidayTheme[Math.floor(Math.random() * holidayTheme.length)];
-let correctGeneralString2 =
-  generalTheme[Math.floor(Math.random() * generalTheme.length)];
+// let correctFoodString2 =
+//   foodTheme[Math.floor(Math.random() * foodTheme.length)];
+// let correctHolidayString2 =
+//   holidayTheme[Math.floor(Math.random() * holidayTheme.length)];
+// let correctGeneralString2 =
+//   generalTheme[Math.floor(Math.random() * generalTheme.length)];
 //* Keyboard 2 rightGuessString
 // console.log(correctFoodString2);
 // console.log(correctHolidayString2);
@@ -418,20 +428,12 @@ function deleteLetter2() {
 //* This function passes if array1 is either Holiday, Food or General
 
 function checkGuess1() {
-//   let rightGuess;
   //checkGuess - for all of the arrays
   let targetRow1 = document.querySelectorAll(".tile-row1")[4 - remainingGuess1];
   //the bracket will use the remaining guess which is each row within the grid
   let guessString = "";
   //   let guessString = currentGuess1[0]
 
-//   if ((array1 = allWords[0])) {
-//     rightGuess = Array.from(correctFoodString1);
-//   } else if ((array1 = allWords[1])) {
-//     rightGuess = Array.from(correctHolidayString1);
-//   } else if ((array1 = allWords[2])) {
-//     rightGuess = Array.from(correctGeneralString1);
-//   }
 
   for (const eachVal of currentGuess1) {
     guessString += eachVal;
@@ -471,7 +473,6 @@ function checkGuess1() {
       } else {
         letterColor = "yellow";
       }
-    //   rightGuess1[letterPosition] = "#";
       console.log('in check function, p1 answer', rightGuess1);
       console.log(guessString);
     }
@@ -482,7 +483,6 @@ function checkGuess1() {
       shadeKeyBoard1(letter, letterColor);
     }, delay);
   }
-  console.log('right guess player 1', rightGuess1);
   if (guessString === rightGuess1) {
     alert("You won the game..this time");
     remainingGuess1 = 0;
@@ -492,28 +492,20 @@ function checkGuess1() {
     currentGuess1 = [];
     nextLetter1 = 0;
 
-    if (remainingGuess2 === 0) {
+    if (remainingGuess1 === 0) {
         alert("Game over, you lost!");
-         alert(`The correct word was ${rightGuess1}`);
+        alert(`The correct word was ${rightGuess1}`);
       }
     }
   }
 
 
 function checkGuess2() {
-  let rightGuess;
   //checkGuess - for all of the arrays
   let targetRow2 = document.querySelectorAll(".tile-row2")[4 - remainingGuess2];
   //the bracket will use the remaining guess which is each row within the grid
   let guessString = "";
 
-  if ((array2 = allWords[0])) {
-    rightGuess = Array.from(correctFoodString2);
-  } else if ((array2 = allWords[1])) {
-    rightGuess = Array.from(correctHolidayString2);
-  } else if ((array2 = allWords[2])) {
-    rightGuess = Array.from(correctGeneralString2);
-  }
 
   for (const eachVal of currentGuess2) {
     guessString += eachVal;
@@ -544,22 +536,22 @@ function checkGuess2() {
     console.log(currentGuess2);
     console.log(box);
 
-    let letterPosition = rightGuess.indexOf(currentGuess2[eachLetter]);
+    let letterPosition = rightGuess2.indexOf(currentGuess2[eachLetter]);
     //if letter is in the right position , color it accordingly
     console.log(currentGuess2[eachLetter]);
-    console.log(rightGuess[eachLetter]);
+    console.log(rightGuess2[eachLetter]);
 
     if (letterPosition === -1) {
       letterColor = "gray";
     } else {
-      if (currentGuess2[eachLetter] === rightGuess[eachLetter]) {
+      if (currentGuess2[eachLetter] === rightGuess2[eachLetter]) {
         //Position within the array of correctArray and each letter
         letterColor = "green";
       } else {
         letterColor = "yellow";
       }
-      rightGuess[letterPosition] = "#";
-      console.log(rightGuess);
+      rightGuess2[letterPosition] = "#";
+      console.log(rightGuess2);
       console.log(guessString);
     }
 
@@ -570,7 +562,7 @@ function checkGuess2() {
     }, delay);
   }
 
-  if (guessString === rightGuess) {
+  if (guessString === rightGuess2) {
     alert("You won the game..this time");
     remainingGuess2 = 0;
     return;
@@ -581,7 +573,7 @@ function checkGuess2() {
 
     if (remainingGuess2 === 0) {
       alert("Game over, you lost!");
-       alert(`The correct word was ${rightGuess}`);
+       alert(`The correct word was ${rightGuess2}`);
     }
   }
 }

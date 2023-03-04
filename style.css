@@ -6,6 +6,10 @@ body {
     font-size: 30px;
 }
 
+#playerName-div{
+    display: block;
+    text-align: center;
+}
 
 #playerName-button{
     font-family: 'Manrope', sans-serif;
@@ -37,10 +41,17 @@ input{
     font-size: 120px;
     color: #414d64;
     justify-content:center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.logo-section {
+    display: flex;
 }
 
 .how-to{
     margin-left: 20px;
+    margin-top: 0px;
 }
 
 #master-logo {
@@ -189,6 +200,7 @@ input{
     display: flex;
     gap: 15px;
     justify-content: center;
+    margin-bottom: 50px;
   }
 
 #names {
@@ -198,7 +210,15 @@ input{
 
 }
 
-.scrabbleImg{
+.scrabbleImg1{
     background-image: url("https://media.istockphoto.com/id/579236076/photo/scrabble-letters.jpg?s=1024x1024&w=is&k=20&c=mIEHzWL8OykS4JYa4yP9-fvGuUYMB_NYUDLIbroh-p4=");
-    
+    width: auto;
+    height: 70px;
+}
+
+.scrabbleImg2{
+    background-image: url("https://media.istockphoto.com/id/579236076/photo/scrabble-letters.jpg?s=1024x1024&w=is&k=20&c=mIEHzWL8OykS4JYa4yP9-fvGuUYMB_NYUDLIbroh-p4=");
+    width: auto;
+    height: 70px;
+    background-position-x: right;
 }
