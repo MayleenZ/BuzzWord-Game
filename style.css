@@ -47,17 +47,27 @@ input{
 
 .logo-section {
     display: flex;
+    align-items: center;
+    gap: 160px
 }
 
-.how-to{
-    margin-left: 20px;
-    margin-top: 0px;
+.how-to-play{
+    display:block;
+    padding: 5px;
+    margin-top: -60px;
 }
+
+/* .how-to-play-description {
+    display: flex;
+    align-items: center;
+} */
 
 #master-logo {
     display:flex;
     justify-content: center;
     color:rgb(5, 5, 5);
+    padding: 15px;
+    margin-left: 95px;
 }
 
 #logo{
@@ -77,7 +87,7 @@ input{
     color: #525E75;
     border: 10px solid #5c82f3;
     margin: 4px;
-    content: "BuzzWord left a message for you, try to find it";
+    content: "BuzzWord left a message for you, try to find it. Hint: Turn up your sound.";
     font-size: 20px;
     padding: 20px;
     justify-content: center;
@@ -102,6 +112,7 @@ input{
     background-color: #92BA92;
     color: black;
     cursor: pointer;
+    box-shadow: 5px 5px 10px 2px rgba(141, 135, 125, 0.8)
 }
 
 
@@ -117,6 +128,7 @@ input{
     background-color: #92BA92;
     color: black;
     cursor: pointer;
+    box-shadow: 5px 5px 10px 2px rgba(141, 135, 125, 0.8)
 }
 
 #boardDivs{
@@ -152,9 +164,9 @@ input{
     border: 3px solid rgb(126, 103, 103);
     border-radius: 5px;
     margin: 2px;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 900;
-    height: 5rem;
+    height: 72px;
     width: 4rem;
   }
 
@@ -168,10 +180,11 @@ input{
     border: 3px solid rgb(126, 103, 103);
     border-radius: 5px;
     margin: 2px;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 900;
-    height: 5rem;
+    height: 72px;
     width: 4rem;
+    Color: black;
   }
   
   .tile-row1, .tile-row2 {
