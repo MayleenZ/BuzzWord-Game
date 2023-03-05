@@ -1,7 +1,7 @@
 # BuzzWord-Game
 
 # About The Project
-
+[Deployed Game](https://mayleenz.github.io/BuzzWord-Game/)
 
 BuzzWord is a word guessing game inspired by the popular game Wordle. The players have to work together to solve both words but if one players loses, they both lose and BuzzWord wins. 
 
