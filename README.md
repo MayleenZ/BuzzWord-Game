@@ -40,7 +40,7 @@ Players have the option to enter one team name for both of them as they are work
 
 **WORD TILES**:
 Tiles will turn green if player guesses the word correctly.
-Tiles will turn yellow if player guess the correct letter in the right location but still isn't the complete word.
+Tiles will turn yellow if player guess the correct letter in the wrong location but still isn't the complete word.
 Tiles will turn gray if no letters have been solved.
 
 
@@ -54,7 +54,7 @@ Each player get a separate word, so there is no room for cheating.
 Only if both grids are solved can players win the game.
 
 **LOSING**
-If no one wins the first round which is guessing the word right, they will need to retry in the next line and get a witty remark about losing.
+If no one wins the first round which is guessing the word right, they will need to retry in the next line.
 
 
 
