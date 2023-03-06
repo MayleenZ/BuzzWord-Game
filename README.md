@@ -16,6 +16,8 @@ I love Wordle and would play with my friends all the time. I wondered about the 
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
 # Usage
 <!-- examples how project can be used. additional screenshots, code examples and demos -->
 BuzzWord can be used as a multiplayer game or even a single player game. As long as both grids are answered correctly, the player wins. 
@@ -57,15 +59,14 @@ Only if both grids are solved can players win the game.
 If no one wins the first round which is guessing the word right, they will need to retry in the next line.
 
 
-
-
-
+# Improvements
+I would like to implement more features such as a bigger data set of words and possibly more categories that players can choose. 
 
 
 # Author & Contact
-Mayleen Zhagnay
-
 ![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)    
+
+Mayleen Zhagnay
 [LinkedIn Profile](https://www.linkedin.com/in/mayleenzhagnay/)
 
 
@@ -75,3 +76,4 @@ Mayleen Zhagnay
 # Acknowledgements
 <!-- link the tutorials here  -->
 [FreeCode Camp](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/)
+[Web Platform](https://webplatform.github.io/docs/tutorials/css_animations/)
