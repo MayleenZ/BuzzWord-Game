@@ -1,7 +1,7 @@
 # BuzzWord-Game
 
 # About The Project
-
+[Deployed Game](https://mayleenz.github.io/BuzzWord-Game/)
 
 BuzzWord is a word guessing game inspired by the popular game Wordle. The players have to work together to solve both words but if one players loses, they both lose and BuzzWord wins. 
 
@@ -15,6 +15,8 @@ I love Wordle and would play with my friends all the time. I wondered about the 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 # Usage
 <!-- examples how project can be used. additional screenshots, code examples and demos -->
@@ -40,7 +42,7 @@ Players have the option to enter one team name for both of them as they are work
 
 **WORD TILES**:
 Tiles will turn green if player guesses the word correctly.
-Tiles will turn yellow if player guess the correct letter in the right location but still isn't the complete word.
+Tiles will turn yellow if player guess the correct letter in the wrong location but still isn't the complete word.
 Tiles will turn gray if no letters have been solved.
 
 
@@ -54,18 +56,17 @@ Each player get a separate word, so there is no room for cheating.
 Only if both grids are solved can players win the game.
 
 **LOSING**
-If no one wins the first round which is guessing the word right, they will need to retry in the next line and get a witty remark about losing.
+If no one wins the first round which is guessing the word right, they will need to retry in the next line.
 
 
-
-
-
+# Improvements
+I would like to implement more features such as a bigger data set of words and possibly more categories that players can choose. 
 
 
 # Author & Contact
-Mayleen Zhagnay
-
 ![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)    
+
+Mayleen Zhagnay
 [LinkedIn Profile](https://www.linkedin.com/in/mayleenzhagnay/)
 
 
@@ -75,3 +76,4 @@ Mayleen Zhagnay
 # Acknowledgements
 <!-- link the tutorials here  -->
 [FreeCode Camp](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/)
+[Web Platform](https://webplatform.github.io/docs/tutorials/css_animations/)
