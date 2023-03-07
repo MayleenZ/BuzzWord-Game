@@ -439,7 +439,8 @@ function checkGuess1() {
     nextLetter1 = 0;
 
     if (remainingGuess1 === 0) {
-        alert(`Game over, you lost! The correct word was ${rightGuess1}`);
+        alert(`Game over, you lost and BuzzWord won! The correct word was ${rightGuess1}`);
+        return
       }
     }
   }
@@ -544,3 +545,4 @@ function shadeKeyBoard2(letter, color) {
 // If the key is already green, do nothing
 // If the key is currently yellow, only allow it to become green
 // Else, shade the key passed to the function
+

@@ -43,55 +43,67 @@ input{
     justify-content:center;
     margin-top: 10px;
     margin-bottom: 50px;
+    animation-name: pulse;
+    animation-duration: 4s;
+    animation-iteration-count: 11;
+    animation-direction : alternate;
+    animation-delay: 3s;
+}
+
+@keyframes pulse {
+    from {
+        transform : scale(1);
+        opacity   : 1;
+    }
+    50% {
+        transform : scale(0.75);
+        opacity   : 0.25;
+    }
+    to {
+        transform : scale(1);
+        opacity   : 1;
+    }
 }
 
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 160px
+    justify-content: space-around;
+    /* gap: 160px */
 }
 
 .how-to-play{
-    display:block;
+    /* display:block; */
     padding: 5px;
     margin-top: -60px;
-}
-
-/* .how-to-play-description {
-    display: flex;
-    align-items: center;
-} */
-
-#master-logo {
-    display:flex;
-    justify-content: center;
-    color:rgb(5, 5, 5);
-    padding: 15px;
-    margin-left: 95px;
-}
-
-#logo{
+    position: relative;
+    display: inline-block;
     font-family: 'Manrope', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     color:rgb(5, 5, 5);
     border: 3px solid rgb(99, 64, 15);
     max-width: 900px;
     padding: 10px;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     background-color: #439A97;
 }
 
-#logo:hover:after{
-    display: flex;
-    background-color: #F1DDBF;
-    color: #525E75;
-    border: 10px solid #5c82f3;
-    margin: 4px;
-    content: "BuzzWord left a message for you, try to find it. Hint: Turn up your sound.";
+.how-to-play-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 236px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    padding: 11px 34px;
+    z-index: 1;
     font-size: 20px;
-    padding: 20px;
-    justify-content: center;
+    border: 10px solid #5c82f3;
 }
+
+.how-to-play:hover .how-to-play-content{
+    display:block
+}
+
 
 
 #surprise-button-div{
@@ -196,7 +208,7 @@ input{
     border: 1px solid black;
     font-family: 'Manrope', sans-serif;
     font-size: 15px;
-    padding: 10px;
+    padding: 8px;
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
     cursor: pointer;
