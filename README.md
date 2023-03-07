@@ -77,4 +77,4 @@ Mayleen Zhagnay
 <!-- link the tutorials here  -->
 [FreeCode Camp](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/)
 [Web Platform](https://webplatform.github.io/docs/tutorials/css_animations/)
-[W3 School] (https://www.w3schools.com/css/css_dropdowns.asp/)
+[W3 School](https://www.w3schools.com/css/css_dropdowns.asp)
