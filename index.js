@@ -1,11 +1,9 @@
 const surpriseButton1 = document.querySelector("#surprise-button1");
 const surpriseButton2 = document.querySelector("#surprise-button2");
-const playerNameBtn = document.querySelector("#playerName-button");
 const clickingNoise = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
 const evilLaugh = new Audio("https://www.fesliyanstudios.com/play-mp3/3976");
 const booSound = new Audio("https://www.fesliyanstudios.com/play-mp3/4221");
-const input = document.querySelector("input");
-console.log(input);
+
 let randomNum1;
 let randomNum2;
 let theme1;
@@ -16,14 +14,6 @@ let rightGuess2;
 
 
 
-//* Adds player names to document
-playerNameBtn.addEventListener("click", function (e) {
-    clickingNoise.play();
-    const li = document.createElement("li");
-    li.textContent = `Welcome Player: ${input.value.toUpperCase()}`;
-    document.querySelector("ol").appendChild(li);
-    input.value = "";
-  });
 
 //* Surprise button1 = Creating theme selection to coincide with surprise me button; using random
 surpriseButton1.addEventListener("click", function (e) {
@@ -545,4 +535,3 @@ function shadeKeyBoard2(letter, color) {
 // If the key is already green, do nothing
 // If the key is currently yellow, only allow it to become green
 // Else, shade the key passed to the function
-

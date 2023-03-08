@@ -1,156 +1,124 @@
-
 body {
-    background-color: #F1DDBF;
-    font-family: 'Manrope', sans-serif;
-    color: #78938A;
+    background-color: #f1ddbf;
+    font-family: "Manrope", sans-serif;
+    color: #78938a;
     font-size: 30px;
-}
-
-#playerName-div{
-    display: block;
-    text-align: center;
-}
-
-#playerName-button{
-    font-family: 'Manrope', sans-serif;
-    color: #4E6C50;
-    font-size: 20px;
-    border-radius: 10px;
-    margin-left: -30px;
-}
-
-#playerName-button:hover {
-    background-color: #89C4E1;
-    color: white;
-    cursor: pointer;
-    box-shadow: 5px 5px 10px 2px rgba(176, 119, 22, 0.8)
-}
-
-input{
-    background-color: #c2ebff;
-    font-size: 30px;
-    margin: 30px;
-    border-radius: 6px;
-}
-
-
-
-#BuzzWord-title {
-    display:flex;
-    font-family: 'Rampart One', cursive;
-    font-size: 120px;
+  }
+  
+  #BuzzWord-title {
+    display: flex;
+    font-family: "Rampart One", cursive;
+    font-size: 90px;
     color: #414d64;
-    justify-content:center;
+    justify-content: center;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     animation-name: pulse;
     animation-duration: 4s;
     animation-iteration-count: 11;
-    animation-direction : alternate;
+    animation-direction: alternate;
     animation-delay: 3s;
-}
-
-@keyframes pulse {
+    background-color: #f1ddbf;
+    border-radius: 15px;
+    padding: 5px;
+  }
+  
+  @keyframes pulse {
     from {
-        transform : scale(1);
-        opacity   : 1;
+      transform: scale(1);
+      opacity: 1;
     }
     50% {
-        transform : scale(0.75);
-        opacity   : 0.25;
+      transform: scale(0.75);
+      opacity: 0.25;
     }
     to {
-        transform : scale(1);
-        opacity   : 1;
+      transform: scale(1);
+      opacity: 1;
     }
-}
-
-.logo-section {
+  }
+  
+  .logo-section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* gap: 160px */
-}
-
-.how-to-play{
-    /* display:block; */
-    padding: 5px;
-    margin-top: -60px;
+    background-image: url("https://media.istockphoto.com/id/579236076/photo/scrabble-letters.jpg?s=1024x1024&w=is&k=20&c=mIEHzWL8OykS4JYa4yP9-fvGuUYMB_NYUDLIbroh-p4=");
+    background-size: 150px;
+    max-height: 150px;
+  }
+  
+  .how-to-play {
+    padding: 13px;
     position: relative;
     display: inline-block;
-    font-family: 'Manrope', sans-serif;
-    font-size: 20px;
-    color:rgb(5, 5, 5);
-    border: 3px solid rgb(99, 64, 15);
-    max-width: 900px;
-    padding: 10px;
-    /* opacity: 0.7; */
-    background-color: #439A97;
-}
-
-.how-to-play-content{
+    align-items: center;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    color: rgb(5, 5, 5);
+    border: 2px solid rgb(99, 64, 15);
+    max-width: 800px;
+    background-color: #439a97;
+    border-radius: 15px;
+  }
+  
+  .how-to-play-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 236px;
+    min-width: 203px;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
-    padding: 11px 34px;
+    padding: 18px;
     z-index: 1;
-    font-size: 20px;
-    border: 10px solid #5c82f3;
-}
-
-.how-to-play:hover .how-to-play-content{
-    display:block
-}
-
-
-
-#surprise-button-div{
+    font-size: 18px;
+    border: 5px solid #5c82f3;
+  }
+  
+  .how-to-play:hover .how-to-play-content {
+    display: block;
+  }
+  
+  #surprise-button-div {
     display: flex;
     justify-content: center;
     gap: 12rem;
-}
-
-#surprise-button1 {
-    font-family: 'Manrope', sans-serif;
+  }
+  
+  #surprise-button1 {
+    font-family: "Manrope", sans-serif;
     color: #263727;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 10px;
     margin: 15px;
-
-}
-#surprise-button1:hover{
-    background-color: #92BA92;
+  }
+  #surprise-button1:hover {
+    background-color: #92ba92;
     color: black;
     cursor: pointer;
-    box-shadow: 5px 5px 10px 2px rgba(141, 135, 125, 0.8)
-}
-
-
-#surprise-button2 {
-    font-family: 'Manrope', sans-serif;
+    box-shadow: 5px 5px 10px 2px rgba(141, 135, 125, 0.8);
+  }
+  
+  #surprise-button2 {
+    font-family: "Manrope", sans-serif;
     color: #263727;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 10px;
     margin: 15px;
-
-}
-#surprise-button2:hover{
-    background-color: #92BA92;
+  }
+  #surprise-button2:hover {
+    background-color: #92ba92;
     color: black;
     cursor: pointer;
-    box-shadow: 5px 5px 10px 2px rgba(141, 135, 125, 0.8)
-}
-
-#boardDivs{
+    box-shadow: 5px 5px 10px 2px rgba(141, 135, 125, 0.8);
+  }
+  
+  #boardDivs {
     display: flex;
     gap: 70px;
     justify-content: center;
     align-items: center;
-}
-
-#firstBoard {
+  }
+  
+  #firstBoard {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -161,14 +129,15 @@ input{
     display: flex;
     align-items: center;
     flex-direction: column;
-  } 
-
+  }
+  
   #keyboard1 {
     display: flex;
     align-items: center;
   }
-
-  .tile-box1, .tile-box2 {
+  
+  .tile-box1,
+  .tile-box2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,8 +150,6 @@ input{
     height: 72px;
     width: 4rem;
   }
-
- 
   
   .filled-box {
     display: flex;
@@ -196,54 +163,36 @@ input{
     font-weight: 900;
     height: 72px;
     width: 4rem;
-    Color: black;
+    color: black;
   }
   
-  .tile-row1, .tile-row2 {
+  .tile-row1,
+  .tile-row2 {
     display: flex;
   }
-
-
-.keyButton1, .keyButton2{
+  
+  .keyButton1,
+  .keyButton2 {
     border: 1px solid black;
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
     padding: 8px;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     text-transform: uppercase;
     cursor: pointer;
   }
-
-  .keyButton1:hover{
-    box-shadow: 2px 3px 3px 1px  rgba(153, 172, 186, 0.8)
+  
+  .keyButton1:hover {
+    box-shadow: 2px 3px 3px 1px rgba(153, 172, 186, 0.8);
   }
-  .keyButton2:hover{
-    box-shadow: 2px 3px 3px 1px  rgba(153, 172, 186, 0.8)
+  .keyButton2:hover {
+    box-shadow: 2px 3px 3px 1px rgba(153, 172, 186, 0.8);
   }
-
+  
   #Boards {
     display: flex;
     gap: 15px;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
-
-#names {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-
-}
-
-.scrabbleImg1{
-    background-image: url("https://media.istockphoto.com/id/579236076/photo/scrabble-letters.jpg?s=1024x1024&w=is&k=20&c=mIEHzWL8OykS4JYa4yP9-fvGuUYMB_NYUDLIbroh-p4=");
-    width: auto;
-    height: 70px;
-}
-
-.scrabbleImg2{
-    background-image: url("https://media.istockphoto.com/id/579236076/photo/scrabble-letters.jpg?s=1024x1024&w=is&k=20&c=mIEHzWL8OykS4JYa4yP9-fvGuUYMB_NYUDLIbroh-p4=");
-    width: auto;
-    height: 70px;
-    background-position-x: right;
-}
+  
